@@ -147,7 +147,6 @@ public class FileCopyTask implements Runnable {
 		Runnable t2 = new CopyTask2(inputFilename, "C:/Users/SFXW10/Desktop/OOP2/lab6/filecopy2.txt");
 		// Define a FileUtil task to copy a file byte by byte.
 		// This is an anonymous class that extends FileUtilTimer.
-		// TODO Can you make this code shorter by passing the filenames
 		// as parameters to the superclass constructor?
 		FileCopyTask t3 = new FileCopyTask() {
 			public void run() {

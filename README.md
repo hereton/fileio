@@ -1,4 +1,5 @@
 # FileIO tasks by Totsapon menkul (*)
+Big-Alice-in-Wonderland.txt sized 2,101,560 bytes.
 I ran the tasks on a ASUS , and got
 these results:
 
@@ -6,7 +7,7 @@ these results:
  --------------------------------------|-------:
  Copy the file one byte at a time. | 7.039303 sec
  Copy file 1KB a time. | 0.012228 sec
-Copy file 4KB a time. | 0.005332 sec
+ Copy file 4KB a time. | 0.005332 sec
  Copy file 64KB a time. | 0.002293 sec
  Copy file by using BefferedReader. | 0.050354 sec
  Copy file by using BefferedReader with array of char. | 0.015752 sec
