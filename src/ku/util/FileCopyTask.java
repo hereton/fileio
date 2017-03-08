@@ -178,18 +178,18 @@ public class FileCopyTask implements Runnable {
 			}
 
 			public String toString() {
-				return "Copy file by using BefferedReader.";
+				return "Copy file by using BufferedReader.";
 			}
 		};
 		t5.setInput(inputFilename);
 		t5.setOutput("C:/Users/SFXW10/Desktop/OOP2/lab6/filecopy5.txt");
 		FileCopyTask t6 = new FileCopyTask() {
 			public void run() {
-				FileUtil.charCopy(in, out, 50000);
+				FileUtil.charCopy(in, out, KB);
 			}
 
 			public String toString() {
-				return "Copy file by using BefferedReader with array of char.";
+				return "Copy file by using BufferedReader with 1KB array of char.";
 			}
 		};
 		t6.setInput(inputFilename);

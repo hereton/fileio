@@ -116,10 +116,10 @@ public class FileUtil {
 				int count = breader.read(charArr);
 				pwriter.write(charArr, 0, count);
 			}
-			in.close();
-			out.close();
 			breader.close();
 			pwriter.close();
+			in.close();
+			out.close();
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}
