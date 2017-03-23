@@ -2,6 +2,7 @@ package ku.util;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
@@ -32,11 +33,17 @@ public class FileUtil {
 					break;
 				out.write(count);
 			}
-			in.close();
-			out.close();
 
-		} catch (Exception e) {
+		} catch (IOException e) {
 			throw new RuntimeException(e);
+		} finally {
+			try {
+				in.close();
+				out.close();
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+
 		}
 	}
 
@@ -61,10 +68,17 @@ public class FileUtil {
 					break; // end
 				out.write(buff, 0, count);
 			}
-			in.close();
-			out.close();
+
 		} catch (Exception e) {
 			throw new RuntimeException(e);
+		} finally {
+			try {
+				in.close();
+				out.close();
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+
 		}
 	}
 
@@ -84,12 +98,16 @@ public class FileUtil {
 				String s = breader.readLine();
 				pwriter.write(s);
 			}
-			in.close();
-			out.close();
-			breader.close();
-			pwriter.close();
-		} catch (Exception e) {
+		} catch (IOException e) {
 			throw new RuntimeException(e);
+		} finally {
+			try {
+				in.close();
+				out.close();
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+
 		}
 
 	}
@@ -116,12 +134,16 @@ public class FileUtil {
 				int count = breader.read(charArr);
 				pwriter.write(charArr, 0, count);
 			}
-			breader.close();
-			pwriter.close();
-			in.close();
-			out.close();
 		} catch (Exception e) {
 			throw new RuntimeException(e);
+		} finally {
+			try {
+				in.close();
+				out.close();
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+
 		}
 	}
 
